@@ -13,7 +13,7 @@ public class ReportCard {
     private int artGrade;
     private int historyGrade;
 
-    //constructor
+    //constructor:
     public ReportCard(int mathGrade, int englishGrade, int phisicsGrade, int chemistryGrade, int biologyGrade, int artGrade, int historyGrade) {
 
         this.mathGrade = validate(mathGrade);
@@ -24,7 +24,7 @@ public class ReportCard {
         this.artGrade =  validate(artGrade);
         this.historyGrade = validate(historyGrade);
     }
-    //getters and setters
+    //getters and setters:
     public int getMathGrade() {
         return mathGrade;
     }
@@ -81,6 +81,7 @@ public class ReportCard {
         this.historyGrade = validate(historyGrade);
     }
 
+    //methods:
     //validate method (max grade couud be 100, min 0)
 
     private int validate(int grade){
@@ -91,5 +92,19 @@ public class ReportCard {
             grade = 0;
         }
         return grade;
+    }
+
+    //toString() method
+    @Override
+    public String toString() {
+        return "ReportCard{" +
+                "mathGrade=" + mathGrade +
+                ", englishGrade=" + englishGrade +
+                ", phisicsGrade=" + phisicsGrade +
+                ", chemistryGrade=" + chemistryGrade +
+                ", biologyGrade=" + biologyGrade +
+                ", artGrade=" + artGrade +
+                ", historyGrade=" + historyGrade +
+                '}';
     }
 }
